@@ -53,15 +53,40 @@ body {
 #menu-container {
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 .nav-menu {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
+  width: 0;
+  display: none;
   background-color: #ff6a28;
   color: #fff;
   height: 100vh;
+}
+
+#menu-container .visible {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  animation-duration: 0.3s;
+  animation-name: slidein;
+}
+
+#open-menu.visible {
+  background-color: #fff;
+  color: #ff6a28;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 50vw;
+  }
 }
 
 .nav-menu a{
