@@ -1,0 +1,172 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  height: 60px;
+  background-color: #ff6a28;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar.white-theme {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#logo-img {
+  width: 50px;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 50vw;
+  }
+}
+
+#blank-space {
+  height: 70px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.nav-menu a,
+#desktop-icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.slogan {
+  display: none;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media only screen and (max-width: 599px) {
+  #desktop-icons {
+    display: none;
+  }
+
+  #mobile-open-menu {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+  }
+
+  #open-menu-img {
+    font-size: 20px;
+  }
+
+  #mobile-open-menu.visible {
+    background-color: #fff;
+    color: #ff6a28;
+  }
+
+  .social-media,
+  #nav-menu-act {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-media {
+    padding-bottom: 20px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .nav-menu-opt {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0px 5px 0px 5px;
+    height: 100%;
+  }
+
+  #nav-menu-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  .nav-menu {
+    width: 0;
+    display: none;
+    background-color: #ff6a28;
+    color: #fff;
+    height: 100vh;
+  }
+
+  #menu-container .visible {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+  }
+
+  #menu-container {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+}
+
+/* Media query para telas grandes */
+@media only screen and (min-width: 600px) {
+  #mobile-open-menu,
+  #menu-container {
+    display: none;
+  }
+
+  #desktop-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  #desktop-icons i {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .slogan {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+}

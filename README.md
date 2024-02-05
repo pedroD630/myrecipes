@@ -1,4 +1,7 @@
-# recipes  <br/>
-This is my first project on The Odin Project. 
+# Pedro Recipes Website  <br/>
+A idéia desse projeto uniu duas grandes necessidades: de por em prática os aprendizados e de aprender a cozinhar.
 <br/>
-I already know basic HTML and CSS, but i want remember basic pieces of web development that i dont have praticate for a long time.
+O objetivo é criar um hebsite simples, leve e de fácil acesso que permita a mim mesmo ver receitas que sempre preciso fazre no meu dia a dia. Durante o projeto quero disponibilizar algumas funcionalidades como:
+- Mudança de tema claro-escuro
+- Disponibilidade offline usando PWA
+- Possibilidade de compartilhar a receita
