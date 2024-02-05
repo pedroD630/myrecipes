@@ -23,7 +23,7 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-#open-menu {
+#mobile-open-menu {
   border: 1px solid #fff;
   border-radius: 5px;
   width: 40px;
@@ -72,7 +72,7 @@ body {
   animation-name: slidein;
 }
 
-#open-menu.visible {
+#mobile-open-menu.visible {
   background-color: #fff;
   color: #ff6a28;
 }
@@ -127,16 +127,14 @@ h3{
   justify-content: center;
 }
 
+/* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 599px) {
-  /* Estilos específicos para dispositivos móveis */
+  
 }
 
-/* Media query para telas médias (Tablets) */
-@media only screen and (min-width: 600px) and (max-width: 1023px) {
-  /* Estilos específicos para tablets */
-}
-
-/* Media query para telas grandes (Desktops) */
-@media only screen and (min-width: 1024px) {
-  /* Estilos específicos para desktops */
+/* Media query para telas grandes */
+@media only screen and (min-width: 600px) {
+  #mobile-open-menu {
+    display: none;
+  }
 }
