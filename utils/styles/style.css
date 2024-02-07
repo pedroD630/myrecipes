@@ -17,6 +17,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  z-index: 9999;
 }
 
 .navbar.white-theme {
@@ -118,6 +119,7 @@ h3 {
 .blurred-back {
   width: 50%;
   backdrop-filter: blur(40px);
+  border-left: 2px solid #ff6a28;
 }
 .card.description {
   width: 100%;
@@ -126,7 +128,7 @@ h3 {
   padding-top: 3px;
 }
 
-.card.description p{
+.card.description p {
   font-weight: bolder;
 }
 
@@ -220,6 +222,9 @@ h3 {
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
+    position: absolute;
+    z-index: 9998;
+    width: 100vw;
   }
 }
 
@@ -245,9 +250,9 @@ h3 {
 
 /* faz a animação do slogan ser visível */
 @media only screen and (min-width: 795px) {
-  .slogan{
+  .slogan {
     display: flex;
-  } 
+  }
 }
 
 @media only screen and (min-width: 800px) {
