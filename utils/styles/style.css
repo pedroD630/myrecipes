@@ -113,17 +113,25 @@ h3 {
   height: 150px;
   display: flex;
   justify-content: flex-end;
+  border: 1px solid #262626;
+  border-radius: 5px;
+  background-size: cover;
   transition: width 0.3s ease;
+  transition: height 0.3s ease-out;
 }
 
 .blurred-back {
   width: 50%;
   backdrop-filter: blur(40px);
-  border-left: 2px solid #ff6a28;
+  border-left: 2px solid #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card.description {
+  padding-left: 10px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   color: #fff;
   padding-top: 3px;
 }
@@ -261,5 +269,8 @@ h3 {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+  }
+  .recipe-card {
+    height: 300px;
   }
 }
