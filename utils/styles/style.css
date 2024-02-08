@@ -194,7 +194,9 @@ h3 {
 
 .recipe-type.selected {
   border: 2px solid #262626;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  width: 110px;
+  height: 45px;
 }
 
 .recipes-list {
