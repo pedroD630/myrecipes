@@ -149,7 +149,7 @@ h3 {
   height: 30px;
   border: 2px solid #fff;
   border-radius: 5px;
-  background-color: #ff6a28;
+  background-color: #fff;
   color: #262626;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -208,21 +208,6 @@ h3 {
   flex-shrink: 0;
 }
 
-.breakfast button {
-  background-color: #FFE6B3;
-}
-
-.lunch button {
-  background-color: #FFA500;
-}
-
-.dinner button {
-  background-color: #FF69B4;;
-}
-
-.snack button{
-  background-color: #ADFF2F;
-}
 /* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 599px) {
   .recipe-card {
