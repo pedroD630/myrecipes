@@ -118,6 +118,7 @@ h3 {
   border: 1px solid #262626;
   border-radius: 5px;
   background-size: cover;
+  flex-shrink: 0;
   transition: width 0.3s ease;
   transition: height 0.3s ease-out;
 }
@@ -149,7 +150,7 @@ h3 {
   border: 2px solid #fff;
   border-radius: 5px;
   background-color: #ff6a28;
-  color: #fff;
+  color: #262626;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -199,8 +200,24 @@ h3 {
 
 #daily-recipe {
   margin-top: 0;
+  flex-shrink: 0;
 }
 
+.breakfast button {
+  background-color: #FFE6B3;
+}
+
+.lunch button {
+  background-color: #FFA500;
+}
+
+.dinner button {
+  background-color: #FF69B4;;
+}
+
+.snack button{
+  background-color: #ADFF2F;
+}
 /* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 599px) {
   .recipe-card {
