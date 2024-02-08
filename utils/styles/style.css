@@ -125,7 +125,7 @@ h3 {
 
 .blurred-back {
   width: 50%;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(100px);
   border-left: 2px solid #262626;
   display: flex;
   justify-content: center;
@@ -266,6 +266,8 @@ h3 {
     background-color: #ff6a28;
     color: #fff;
     height: 100vh;
+    top: 0;
+    position: fixed;
   }
 
   #menu-container .visible {
