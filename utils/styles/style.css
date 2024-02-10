@@ -304,6 +304,8 @@ h3 {
   padding: 20px 0;
   margin-top: 30px;
   width: 100vw;
+  bottom: 0;
+  position: relative;
 }
 
 .container {
