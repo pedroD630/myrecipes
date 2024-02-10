@@ -21,9 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector("#all").classList.toggle("selected")
 
                 var cards = document.querySelectorAll(".recipes-list .recipe-card");
-                cards.forEach(card => {
-                    card.style.display = "flex";
-                })
+                if (cards.length === 0) {
+                    var empty_message = document.querySelector("#empty")
+                    if (!empty_message.classList.contains("visible")) {
+                        empty_message.classList.toggle("visible")
+                    }
+                } else {
+                    cards.forEach(card => {
+                        card.style.display = "flex";
+                    })
+                }
             }
             else {
                 document.querySelector(".selected").classList.toggle("selected");
@@ -31,7 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 var target_id = e.currentTarget.id;
                 document.querySelector(`#${target_id}`).classList.toggle("selected");
 
+                var cards_category = document.querySelectorAll(`.${target_id}`);
+                if (cards_category.length === 0) {
+                    var empty_message = document.querySelector("#empty")
+                    if(!empty_message.classList.contains("visible")) {
+                        empty_message.classList.toggle("visible")
+                    }
+                } 
+
                 var cards = document.querySelectorAll(".recipes-list .recipe-card");
+
                 cards.forEach(card => {
                     if (card.classList.contains(`${target_id}`)) {
                         card.style.display = "flex";
@@ -40,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.display = "none";
                     }
                 })
+
+
             }
 
         })

@@ -210,6 +210,15 @@ h3 {
   flex-shrink: 0;
 }
 
+#empty {
+  display: none;
+}
+#empty.visible {
+  display: flex;
+  margin-top: 20px;
+}
+
+
 /* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 599px) {
   .recipe-card {
