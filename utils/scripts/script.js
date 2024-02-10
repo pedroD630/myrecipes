@@ -9,10 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector("#mobile-open-menu").classList.toggle("visible");
     });
 
-    // quando clicar em um seletor
-    // receber id do seletor
-    // sumir todos os cards
-    // exibir cards com a classe do id do seletor
+    var share_btns = document.querySelectorAll(".share");
+    share_btns.forEach(share_btn => {
+        document.addEventListener("click", (e) => {
+            sharePage();
+        })
+    });
+    
     var selectors = document.querySelectorAll(".recipe-type");
     selectors.forEach(selector => {
         selector.addEventListener('click', (e) => {
