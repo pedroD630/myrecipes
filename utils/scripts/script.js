@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var share_btns = document.querySelectorAll(".share");
     share_btns.forEach(share_btn => {
-        document.addEventListener("click", (e) => {
+        share_btn.addEventListener("click", (e) => {
             sharePage();
         })
     });
-    
+
     var selectors = document.querySelectorAll(".recipe-type");
     selectors.forEach(selector => {
         selector.addEventListener('click', (e) => {
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 var cards_category = document.querySelectorAll(`.${target_id}`);
                 if (cards_category.length === 0) {
                     var empty_message = document.querySelector("#empty")
-                    if(!empty_message.classList.contains("visible")) {
+                    if (!empty_message.classList.contains("visible")) {
                         empty_message.classList.toggle("visible")
                     }
-                } 
+                }
 
                 var cards = document.querySelectorAll(".recipes-list .recipe-card");
 
