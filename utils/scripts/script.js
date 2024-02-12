@@ -1,3 +1,26 @@
+function sharePage() {
+    if (window.location) {
+        var page_url = window.location.href;
+    }
+    var page_title = document.title;
+
+    //https://www.geeksforgeeks.org/how-to-use-web-share-api-for-native-share-options-in-html-javascript/
+    //https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#syntax
+
+    if (navigator.share) {
+        navigator.share({
+            title: page_title,
+            url: page_url
+        }).catch(err => {
+            console.log(
+                "Error while using Web share API:");
+            console.log(err);
+        });
+    } else {
+        navigator.clipboard.writeText(page_url);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
