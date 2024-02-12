@@ -18,6 +18,13 @@ function sharePage() {
         });
     } else {
         navigator.clipboard.writeText(page_url);
+
+        var copyModal = document.querySelector("#copyModal");
+        copyModal.style.display = "flex";
+
+        window.setTimeout( () => {
+            copyModal.style.display = "none";
+        }, 3000)
     }
 }
 
