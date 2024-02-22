@@ -1,3 +1,30 @@
+function sharePage() {
+    if (window.location) {
+        var page_url = window.location.href;
+    }
+    var page_title = document.title;
+
+    if (navigator.share) {
+        navigator.share({
+            title: page_title,
+            url: page_url
+        }).catch(err => {
+            console.log(
+                "Error while using Web share API:");
+            console.log(err);
+        });
+    } else {
+        navigator.clipboard.writeText(page_url);
+
+        var copyModal = document.querySelector("#copyModal");
+        copyModal.style.display = "flex";
+
+        window.setTimeout( () => {
+            copyModal.style.display = "none";
+        }, 3000)
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
@@ -9,10 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector("#mobile-open-menu").classList.toggle("visible");
     });
 
-    // quando clicar em um seletor
-    // receber id do seletor
-    // sumir todos os cards
-    // exibir cards com a classe do id do seletor
+    var share_btns = document.querySelectorAll(".share");
+    share_btns.forEach(share_btn => {
+        share_btn.addEventListener("click", (e) => {
+            sharePage();
+        })
+    });
+
     var selectors = document.querySelectorAll(".recipe-type");
     selectors.forEach(selector => {
         selector.addEventListener('click', (e) => {
@@ -41,10 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 var cards_category = document.querySelectorAll(`.${target_id}`);
                 if (cards_category.length === 0) {
                     var empty_message = document.querySelector("#empty")
-                    if(!empty_message.classList.contains("visible")) {
+                    if (!empty_message.classList.contains("visible")) {
                         empty_message.classList.toggle("visible")
                     }
-                } 
+                }
 
                 var cards = document.querySelectorAll(".recipes-list .recipe-card");
 
