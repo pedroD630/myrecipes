@@ -4,9 +4,6 @@ function sharePage() {
     }
     var page_title = document.title;
 
-    //https://www.geeksforgeeks.org/how-to-use-web-share-api-for-native-share-options-in-html-javascript/
-    //https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share#syntax
-
     if (navigator.share) {
         navigator.share({
             title: page_title,
