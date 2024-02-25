@@ -1,25 +1,42 @@
-function sharePage() {
+function sharePage(isRecipe) {
     if (window.location) {
-        var page_url = window.location.href;
+        var pageUrl = window.location.href;
     }
-    var page_title = document.title;
+    var pageTitle = document.title;
+
+    if (isRecipe) {
+        var recipeName = document.querySelector(".presentation h3").textContent;
+        var recipeCalories = document.querySelector("#calories p").textContent;
+        var recipeTime = document.querySelector("#prepare-time p").textContent;
+        var message = `Veja essa receita incrível no Pedro Receitas! ${recipeName} --- ${recipeCalories} --- ${recipeTime}`;
+
+        const data = {
+            title: pageTitle,
+            text: message,
+            url: pageUrl
+        };
+    } else {
+        var message = `Receitas simples e fáceis!`
+        const data = {
+            title: pageTitle,
+            text: message,
+            url: pageUrl
+        };
+    }
 
     if (navigator.share) {
-        navigator.share({
-            title: page_title,
-            url: page_url
-        }).catch(err => {
+        navigator.share(data).catch(err => {
             console.log(
                 "Error while using Web share API:");
             console.log(err);
         });
     } else {
-        navigator.clipboard.writeText(page_url);
+        navigator.clipboard.writeText(message + " --> " + pageUrl);
 
         var copyModal = document.querySelector("#copyModal");
         copyModal.style.display = "flex";
 
-        window.setTimeout( () => {
+        window.setTimeout(() => {
             copyModal.style.display = "none";
         }, 3000)
     }
@@ -39,7 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var share_btns = document.querySelectorAll(".share");
     share_btns.forEach(share_btn => {
         share_btn.addEventListener("click", (e) => {
-            sharePage();
+            if (e.target.classList.contains('recipe-link')) {
+                sharePage(true);
+            } else {
+                sharePage(false);
+            }
         })
     });
 
