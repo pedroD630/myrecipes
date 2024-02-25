@@ -93,4 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    var closeModal = document.querySelectorAll(".close");
+    closeModal.forEach(closeBtn => {
+        closeBtn.addEventListener("click", (e) => {
+            var modals = document.querySelectorAll(".modal");
+            modals.forEach(modal => {
+                modal.style.display = "none";
+            })
+        })
+    });
+
 });

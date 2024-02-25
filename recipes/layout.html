@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Receitas</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../utils/styles/style.css" />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css "
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../utils/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar white-theme" id="navbar">
+      <div id="logo">
+        <img
+          id="logo-img"
+          src="../utils/img/chapeu-white.svg"
+          alt="Logo cozinheiro"
+        />
+        <p id="logo-text">Pedro Receitas</p>
+      </div>
+      <div class="slogan">
+        <p class="slogan-text">Aprendendo a cozinhar</p>
+      </div>
+      <div id="desktop-icons">
+        <a class="menu-links share" id="share-page"
+          ><i class="bi bi-share-fill"></i> Compartilhar</a
+        >
+        <a class="menu-links" href="https://github.com/pedroD630"
+          ><i class="bi bi-github"></i> GitHub</a
+        >
+        <a class="menu-links" href="https://www.linkedin.com/in/pedrohensil06"
+          ><i class="bi bi-linkedin"></i> LinkedIn</a
+        >
+      </div>
+      <div id="mobile-open-menu">
+        <i class="bi bi-list" id="open-menu-img"></i>
+      </div>
+    </div>
+    <div id="menu-container">
+      <div class="nav-menu">
+        <div class="nav-menu-opt">
+          <div>
+            <div id="nav-menu-header">
+              <h3>Menu</h3>
+              <i class="bi bi-x-lg" id="close"></i>
+            </div>
+            <div id="nav-menu-act">
+              <a class="menu-links" href="#"
+                ><i class="bi bi-house-fill"></i> Página Inicial</a
+              >
+              <a class="menu-links share" id="share-page"
+                ><i class="bi bi-share-fill"></i> Compartilhar</a
+              >
+            </div>
+          </div>
+          <div class="social-media">
+            <h3>Mais projetos</h3>
+            <a class="menu-links" href="https://github.com/pedroD630"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+            <a
+              class="menu-links"
+              href="https://www.linkedin.com/in/pedrohensil06"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <!--<span class="close">&times;</span>-->
+        <h3>Link copiado!</h3>
+      </div>
+    </div>
+
+    <div id="content">
+        <div class="recipe">
+          <div class="recipe-header">
+            <div class="presentation">
+                <h3>Arroz com Feijão</h3>
+                <img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/a5aac6f8bc6d4418eabbae18bdd72ff2.jpg" class="recipe-pres-img img">
+            </div>
+            <div class="recipe-info">
+                <div class="recipe-atribute">
+                    <p><i class="bi bi-stopwatch-fill"></i> Tempo: x</p>
+                </div>
+                <div class="recipe-atribute">
+                    <p><i class="bi bi-fire"></i> Kcal: x</p>
+                </div>
+                <div class="recipe-atribute">
+                    <p><i class="bi bi-currency-dollar"></i> Custo: x</p>
+                </div>
+                <button class="share"><i class="bi bi-share-fill"></i></button>
+            </div>
+        </div>
+        <div class="recipe-ingredients">
+          <h3>Ingredientes</h3>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient1">
+            <span>Ingrediente 1</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient2">
+            <span>Ingrediente 2</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3">
+            <span>Ingrediente 3</span>
+          </div>
+        </div>
+        <div class="recipe-method">
+          <h3>Modo de Preparo</h3>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">1.</p>
+              <p class="text"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus consequat dolor quis imperdiet. 
+                Duis feugiat arcu nunc, non tempus arcu viverra non. 
+              </p>
+            </div>
+            <div class="method-img">
+              <img class="img method-img" id="method-img" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHxk_F88lN3woZkPtCgctcNRtljC1hocAwGoiqKF7aBXig4us-QblXLAgoO5S0spBcNWwr7t1_GA8LbRIHWDz3ZJFlbei3av--AT3Pfn0&usqp=CAE">
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">2.</p>
+              <p class="text"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus consequat dolor quis imperdiet. 
+                Duis feugiat arcu nunc, non tempus arcu viverra non. 
+              </p>
+            </div>
+            <div class="method-img">
+              <img class="img method-img" id="method-img" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHxk_F88lN3woZkPtCgctcNRtljC1hocAwGoiqKF7aBXig4us-QblXLAgoO5S0spBcNWwr7t1_GA8LbRIHWDz3ZJFlbei3av--AT3Pfn0&usqp=CAE">
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p>&copy; 2024 Pedro Silva.</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-links">
+                  <li><a href="https://www.linkedin.com/in/pedrohensil06" target="_blank"><i class="bi-linkedin"></i></a></li>
+                  <li><a href="https://github.com/pedroD630" target="_blank"><i class="bi bi-github"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+  </body>
+</html>
