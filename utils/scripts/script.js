@@ -1,4 +1,5 @@
 function sharePage(isRecipe) {
+    alert("Cheguei")
     if (window.location) {
         var pageUrl = window.location.href;
     }
@@ -25,6 +26,7 @@ function sharePage(isRecipe) {
     }
 
     if (navigator.share) {
+        alert("Share")
         navigator.share(data).catch(err => {
             alert(
                 "Error while using Web share API:" + err);
