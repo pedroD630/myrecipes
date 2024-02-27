@@ -1,5 +1,5 @@
 function sharePage(isRecipe) {
-    alert("Cheguei")
+    console.log("Função")
     if (window.location) {
         var pageUrl = window.location.href;
     }
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     share_btns.forEach(share_btn => {
         share_btn.addEventListener("click", (e) => {
             if (e.target.classList.contains('recipe-link')) {
-                alert("Clique");
+                console.log("Clique");
                 sharePage(true);
             } else {
                 sharePage(false);
