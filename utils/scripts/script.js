@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     share_btns.forEach(share_btn => {
         share_btn.addEventListener("click", (e) => {
             if (e.target.classList.contains('recipe-link')) {
+                alert("Clique");
                 sharePage(true);
             } else {
                 sharePage(false);
