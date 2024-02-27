@@ -26,8 +26,8 @@ function sharePage(isRecipe) {
 
     if (navigator.share) {
         navigator.share(data).catch(err => {
-            console.log(
-                "Error while using Web share API:");
+            alert(
+                "Error while using Web share API:" + err);
             console.log(err);
         });
     } else {
