@@ -1,5 +1,4 @@
 function sharePage(isRecipe) {
-    console.log("Função")
     if (window.location) {
         var pageUrl = window.location.href;
     }
@@ -26,9 +25,9 @@ function sharePage(isRecipe) {
     }
 
     if (navigator.share) {
-        alert("Share")
+        alert(data)
         navigator.share(data).catch(err => {
-            alert(
+            console.log(
                 "Error while using Web share API:" + err);
             console.log(err);
         });
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     share_btns.forEach(share_btn => {
         share_btn.addEventListener("click", (e) => {
             if (e.target.classList.contains('recipe-link')) {
-                console.log("Clique");
                 sharePage(true);
             } else {
                 sharePage(false);
