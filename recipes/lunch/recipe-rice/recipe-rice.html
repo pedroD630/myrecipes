@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faça o arroz soltinho</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/myrecipes/utils/styles/style.css" />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css "
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/myrecipes/utils/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar white-theme" id="navbar">
+      <div id="logo">
+        <a href="/myrecipes/index.html">
+          <img
+            id="logo-img"
+            src="/myrecipes//utils/img/chapeu-white.svg"
+            alt="Logo cozinheiro"
+          />
+        </a>
+        <p id="logo-text">Pedro Receitas</p>
+      </div>
+      <div class="slogan">
+        <p class="slogan-text">Aprendendo a cozinhar</p>
+      </div>
+      <div id="desktop-icons">
+        <a class="menu-links share" id="share-page"
+          ><i class="bi bi-share-fill"></i> Compartilhar</a
+        >
+        <a class="menu-links" href="https://github.com/pedroD630"
+          ><i class="bi bi-github"></i> GitHub</a
+        >
+        <a class="menu-links" href="https://www.linkedin.com/in/pedrohensil06"
+          ><i class="bi bi-linkedin"></i> LinkedIn</a
+        >
+      </div>
+      <div id="mobile-open-menu">
+        <i class="bi bi-list" id="open-menu-img"></i>
+      </div>
+    </div>
+    <div id="menu-container">
+      <div class="nav-menu">
+        <div class="nav-menu-opt">
+          <div>
+            <div id="nav-menu-header">
+              <h3>Menu</h3>
+              <i class="bi bi-x-lg" id="close"></i>
+            </div>
+            <div id="nav-menu-act">
+              <a class="menu-links" href="#"
+                ><i class="bi bi-house-fill"></i> Página Inicial</a
+              >
+              <a class="menu-links share" id="share-page"
+                ><i class="bi bi-share-fill"></i> Compartilhar</a
+              >
+            </div>
+          </div>
+          <div class="social-media">
+            <h3>Mais projetos</h3>
+            <a class="menu-links" href="https://github.com/pedroD630"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+            <a
+              class="menu-links"
+              href="https://www.linkedin.com/in/pedrohensil06"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <!--<span class="close">&times;</span>-->
+        <h3>Link copiado!</h3>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="recipe">
+        <div class="recipe-header">
+          <div class="presentation">
+            <h3>Arroz soltinho (4 porções)</h3>
+            <img
+              src="/myrecipes/recipes/lunch/recipe-rice/img/rice.webp"
+              class="recipe-pres-img img"
+            />
+          </div>
+          <div class="recipe-info">
+            <div class="recipe-atribute" id="prepare-time">
+              <p><i class="bi bi-stopwatch-fill"></i> Tempo: 20 minutos</p>
+            </div>
+            <div class="recipe-atribute" id="calories">
+              <p><i class="bi bi-fire"></i> Kcal: 342 total</p>
+            </div>
+            <div class="recipe-atribute" id="price">
+              <p><i class="bi bi-currency-dollar"></i> Custo: R$ 1,63</p>
+            </div>
+            <button class="share recipe-link">
+              <i class="bi bi-share-fill"></i>
+            </button>
+          </div>
+        </div>
+        <div class="recipe-ingredients">
+          <h3>Ingredientes</h3>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient1" />
+            <span>1 xícara (chá) de arroz</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient2" />
+            <span>2 xícaras (chá) de água</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>½ cebola</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>1 colher (sopa) de azeite</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>1 folha de louro</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>½ colher (chá) de sal</span>
+          </div>
+        </div>
+        <div class="recipe-method">
+          <h3>Modo de Preparo</h3>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">1.</p>
+              <p class="text">
+                Descasque e pique fino a cebola. Numa chaleira, leve um pouco mais de 2 xícaras (chá) de água ao fogo baixo, até ferver.
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">2.</p>
+              <p class="text">
+                Leve uma panela média ao fogo baixo. Quando aquecer, regue com o azeite e acrescente a cebola. Tempere com uma pitada de sal e refogue por cerca de 2 minutos, até murchar. Junte o louro e misture bem.
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">3.</p>
+              <p class="text">
+                Acrescente o arroz e mexa bem para envolver todos os grãos com o azeite por cerca de 1 minuto – isso ajuda a deixar o arroz soltinho depois de cozido.
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">4.</p>
+              <p class="text">
+                Meça 2 xícaras (chá) da água fervente e regue o arroz. Tempere com o sal, misture bem e aumente o fogo para médio, não mexa mais.
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">5.</p>
+              <p class="text">
+                Assim que a água atingir o mesmo nível do arroz, diminua o fogo e tampe parcialmente a panela. Deixe cozinhar até que o arroz absorva toda a água – para verificar se a água secou, fure o arroz com um garfo e afaste delicadamente alguns grãos do fundo da panela; se ainda estiver molhado, deixe cozinhar mais um pouquinho.
+              </p>
+            </div>
+            <div class="method-img">
+              <img class="img method-img" id="method-img" src="/myrecipes/recipes/lunch/recipe-rice/img/cozinhando.jpg">
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">6.</p>
+              <p class="text">
+                Desligue o fogo e mantenha a panela tampada por 5 minutos antes de servir para que os grãos terminem de cozinhar no próprio vapor. Em seguida, solte os grãos com um garfo, transfira para uma tigela e sirva quente.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; 2024 Pedro Silva.</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="social-links">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/pedrohensil06"
+                    target="_blank"
+                    ><i class="bi-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/pedroD630" target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

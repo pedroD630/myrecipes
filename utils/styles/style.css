@@ -414,6 +414,10 @@ h3 {
 .method-description p{ 
   margin: 0;
 }
+.method-img {
+  display: flex;
+  align-self: center;
+}
 
 /* Estilos específicos para dispositivos móveis */
 @media only screen and (max-width: 599px) {
