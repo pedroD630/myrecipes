@@ -43,6 +43,11 @@ function sharePage(isRecipe) {
     }
 }
 
+function getRecipeCards() {
+    var cards = document.querySelectorAll(".recipes-list .recipe-card");
+    return cards;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
@@ -72,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector(".selected").classList.toggle("selected")
                 document.querySelector("#all").classList.toggle("selected")
 
-                var cards = document.querySelectorAll(".recipes-list .recipe-card");
+                var cards = getRecipeCards();
                 if (cards.length === 0) {
                     var empty_message = document.querySelector("#empty")
                     if (!empty_message.classList.contains("visible")) {
@@ -98,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
 
-                var cards = document.querySelectorAll(".recipes-list .recipe-card");
+                var cards = getRecipeCards();
 
                 cards.forEach(card => {
                     if (card.classList.contains(`${target_id}`)) {
