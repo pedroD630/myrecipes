@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanche de frigideira com ovo </title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/myrecipes/utils/styles/style.css" />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css "
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/myrecipes/utils/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar white-theme" id="navbar">
+      <div id="logo">
+        <a href="/myrecipes/index.html">
+          <img
+            id="logo-img"
+            src="/myrecipes//utils/img/chapeu-white.svg"
+            alt="Logo cozinheiro"
+          />
+        </a>
+        <p id="logo-text">Pedro Receitas</p>
+      </div>
+      <div class="slogan">
+        <p class="slogan-text">Aprendendo a cozinhar</p>
+      </div>
+      <div id="desktop-icons">
+        <a class="menu-links share" id="share-page"
+          ><i class="bi bi-share-fill"></i> Compartilhar</a
+        >
+        <a class="menu-links" href="https://github.com/pedroD630"
+          ><i class="bi bi-github"></i> GitHub</a
+        >
+        <a class="menu-links" href="https://www.linkedin.com/in/pedrohensil06"
+          ><i class="bi bi-linkedin"></i> LinkedIn</a
+        >
+      </div>
+      <div id="mobile-open-menu">
+        <i class="bi bi-list" id="open-menu-img"></i>
+      </div>
+    </div>
+    <div id="menu-container">
+      <div class="nav-menu">
+        <div class="nav-menu-opt">
+          <div>
+            <div id="nav-menu-header">
+              <h3>Menu</h3>
+              <i class="bi bi-x-lg" id="close"></i>
+            </div>
+            <div id="nav-menu-act">
+              <a class="menu-links" href="#"
+                ><i class="bi bi-house-fill"></i> Página Inicial</a
+              >
+              <a class="menu-links share" id="share-page"
+                ><i class="bi bi-share-fill"></i> Compartilhar</a
+              >
+            </div>
+          </div>
+          <div class="social-media">
+            <h3>Mais projetos</h3>
+            <a class="menu-links" href="https://github.com/pedroD630"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+            <a
+              class="menu-links"
+              href="https://www.linkedin.com/in/pedrohensil06"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <!--<span class="close">&times;</span>-->
+        <h3>Link copiado!</h3>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="recipe">
+        <div class="recipe-header">
+          <div class="presentation">
+            <h3>Lanche de frigideira com ovo </h3>
+            <img
+              src="/myrecipes/recipes/snacks/recipe-bread-eggs/img/snack.webp"
+              class="recipe-pres-img img"
+            />
+          </div>
+          <div class="recipe-info">
+            <div class="recipe-atribute" id="prepare-time">
+              <p><i class="bi bi-stopwatch-fill"></i> Tempo: 10 minutos</p>
+            </div>
+            <div class="recipe-atribute" id="calories">
+              <p><i class="bi bi-fire"></i> Kcal: 460 total</p>
+            </div>
+            <div class="recipe-atribute" id="price">
+              <p><i class="bi bi-currency-dollar"></i> Custo:  R$ 2,03</p>
+            </div>
+            <button class="share recipe-link">
+              <i class="bi bi-share-fill"></i>
+            </button>
+          </div>
+        </div>
+        <div class="recipe-ingredients">
+          <h3>Ingredientes</h3>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient1" />
+            <span>2 ovos</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient2" />
+            <span>1 pitada de sal</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>1 colher de sopa de manteiga</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>1 fatia de presunto</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>1 fatia de queijo</span>
+          </div>
+          <div class="ingredient">
+            <input type="checkbox" id="ingredient3" />
+            <span>2 fatias de pão integral</span>
+          </div>
+        </div>
+        <div class="recipe-method">
+          <h3>Modo de Preparo</h3>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">1.</p>
+              <p class="text">
+                Reúna todos os ingredientes; 
+              </p>
+            </div>
+            <div class="method-img">
+                <img class="img method-img" id="method-img" src="/myrecipes/recipes/snacks/recipe-bread-eggs/img/all-ingredients.jpeg">
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">2.</p>
+              <p class="text">
+                Em uma tigela, coloque os ovos e tempere com sal. Bata até ficar homogêneo; 
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">3.</p>
+              <p class="text">
+                Em uma frigideira, coloque a manteiga, deixe derreter e acrescente os ovos, distribuindo por todo o fundo da panela; 
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">4.</p>
+              <p class="text">
+                Quando o ovo começar a firmar, coloque as fatias de pão por cima, uma ao lado da outra; 
+              </p>
+            </div>
+            <div class="method-img">
+                <img class="img method-img" id="method-img" src="/myrecipes/recipes/snacks/recipe-bread-eggs/img/pao-no-ovo.jpeg">
+              </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">5.</p>
+              <p class="text">
+                Em seguida, vire o preparo, deixando os pães para baixo e o ovo para cima; 
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">6.</p>
+              <p class="text">
+                Dobre as beiradas do ovo para dentro do pão e disponha o presunto e o queijo sobre uma das fatias; 
+              </p>
+            </div>
+            <div class="method-img">
+                <img class="img method-img" id="method-img" src="/myrecipes/recipes/snacks/recipe-bread-eggs/img/pao-dobrado.jpeg">
+              </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">7.</p>
+              <p class="text">
+                Dobre uma fatia de pão por cima da outra para formar o sanduíche;  
+              </p>
+            </div>
+          </div>
+          <div class="method">
+            <div class="method-description">
+              <p class="num">8.</p>
+              <p class="text">
+                Deixe esquentar um pouco para derreter o queijo; Agora é só servir. Bom apetite!  
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; 2024 Pedro Silva.</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="social-links">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/pedrohensil06"
+                    target="_blank"
+                    ><i class="bi-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/pedroD630" target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
