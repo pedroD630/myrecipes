@@ -43,6 +43,43 @@ function sharePage(isRecipe) {
     }
 }
 
+function getRecipeCards() {
+    var cards = document.querySelectorAll(".recipes-list .recipe-card");
+    return cards;
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function getDailyRecipe() {
+    var cards = getRecipeCards();
+
+    var lastUpdateDate = localStorage.getItem('lastUpdateDate');
+    var currentDate = (new Date()).toISOString().slice(0, 10);
+
+    if (lastUpdateDate !== currentDate) {
+        randomIndex = getRandomInt(cards.length)
+
+        localStorage.setItem('lastUpdateDate', currentDate);
+        localStorage.setItem('cardIndex', randomIndex);
+    }
+
+    var savedIndex = localStorage.getItem('cardIndex');
+
+    var dailyContainer = document.querySelector("#daily-recipe");
+    var sortedCard = cards[savedIndex];
+
+    var inlineStyle = sortedCard.getAttribute('style');
+    dailyContainer.setAttribute('style', inlineStyle);
+
+    var cardBackDiv = sortedCard.children[0];
+    const cloneCard = cardBackDiv.cloneNode(true);
+    dailyContainer.appendChild(cloneCard);
+}
+
+getDailyRecipe();
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
@@ -72,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector(".selected").classList.toggle("selected")
                 document.querySelector("#all").classList.toggle("selected")
 
-                var cards = document.querySelectorAll(".recipes-list .recipe-card");
+                var cards = getRecipeCards();
                 if (cards.length === 0) {
                     var empty_message = document.querySelector("#empty")
                     if (!empty_message.classList.contains("visible")) {
@@ -98,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
 
-                var cards = document.querySelectorAll(".recipes-list .recipe-card");
+                var cards = getRecipeCards();
 
                 cards.forEach(card => {
                     if (card.classList.contains(`${target_id}`)) {
