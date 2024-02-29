@@ -48,6 +48,10 @@ function getRecipeCards() {
     return cards;
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
