@@ -4,20 +4,22 @@ function sharePage(isRecipe) {
     }
     var pageTitle = document.title;
 
+    var data = {};
+    
     if (isRecipe) {
         var recipeName = document.querySelector(".presentation h3").textContent;
         var recipeCalories = document.querySelector("#calories p").textContent;
         var recipeTime = document.querySelector("#prepare-time p").textContent;
         var message = `Veja essa receita incrível no Pedro Receitas! ${recipeName} --- ${recipeCalories} --- ${recipeTime}`;
 
-        const data = {
+        data = {
             title: pageTitle,
             text: message,
             url: pageUrl
         };
     } else {
         var message = `Receitas simples e fáceis!`
-        const data = {
+        data = {
             title: pageTitle,
             text: message,
             url: pageUrl
@@ -25,7 +27,6 @@ function sharePage(isRecipe) {
     }
 
     if (navigator.share) {
-        alert(data)
         navigator.share(data).catch(err => {
             console.log(
                 "Error while using Web share API:" + err);
