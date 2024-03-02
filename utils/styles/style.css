@@ -6,6 +6,12 @@ body {
   color: #262626;
 }
 
+.no-select{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .navbar {
   top: 0;
   position: fixed;
@@ -87,9 +93,6 @@ h3 {
   transition: all 0.3s ease-out;
   color: #fff;
   padding: 2px;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 
 .menu-links:hover {
