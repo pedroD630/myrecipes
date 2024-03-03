@@ -1,3 +1,7 @@
+function isHomepage() {
+    return window.location.pathname === '/myrecipes/index.html';
+}
+
 function sharePage(isRecipe) {
     if (window.location) {
         var pageUrl = window.location.href;
@@ -79,7 +83,9 @@ function getDailyRecipe() {
     dailyContainer.appendChild(cloneCard);
 }
 
-getDailyRecipe();
+if (isHomepage()) {
+    getDailyRecipe();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
