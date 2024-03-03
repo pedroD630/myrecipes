@@ -424,8 +424,60 @@ h3 {
   align-self: center;
 }
 
+.set-theme {
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 2px;
+  margin: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.set-theme.light {
+  border: 2px solid #cccccc;
+  background-color: #cfcece;
+}
+
+.set-theme.dark {
+  border: 2px solid #666666;
+  background-color: #333333;
+}
+
+.theme-switch {
+  width: 45%;
+  background-color: #000000;
+  border-radius: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin 0.3s ease;
+}
+
+.theme-switch.light {
+  background-color: #ffffff;
+  color: #cecece;
+  margin-right: auto;
+}
+
+.theme-switch.dark {
+  background-color: #000000;
+  color: #fefefe;
+  margin-left: auto;
+}
+
+.theme-switch i {
+  font-size: 15px;
+}
+
+.navbar-opt {
+  display: flex;
+}
+
 /* Estilos específicos para dispositivos móveis */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 699px) {
   .recipe-card {
     width: 90vw;
   }
@@ -510,7 +562,7 @@ h3 {
 }
 
 /* Media query para telas grandes */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .recipe-card {
     width: 70vw;
   }
@@ -521,10 +573,11 @@ h3 {
 
   #desktop-icons {
     display: flex;
+    align-items: center;
     gap: 10px;
   }
 
-  #desktop-icons i {
+  #desktop-icons .menu-links i {
     font-size: 20px;
   }
   .recipe-header .presentation img{
@@ -536,13 +589,13 @@ h3 {
 }
 
 /* faz a animação do slogan ser visível */
-@media only screen and (min-width: 795px) {
+@media only screen and (min-width: 840px) {
   .slogan {
     display: flex;
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 850px) {
   .slogan {
     opacity: 1;
     flex-grow: 1;
