@@ -81,6 +81,11 @@ function getDailyRecipe() {
 getDailyRecipe();
 
 document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
         document.querySelector("#mobile-open-menu").classList.toggle("visible");
