@@ -88,6 +88,24 @@ if (isHomepage()) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    const body = document.body;
+    if (theme === 'dark') {
+        body.classList.add('darkmode');
+    }
+
+    const themeSwitcher = document.getElementById('set-theme');
+
+    themeSwitcher.addEventListener('click', () => {
+        body.classList.toggle('darkmode');
+
+        if (body.classList.contains('darkmode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
         document.querySelector("#mobile-open-menu").classList.toggle("visible");

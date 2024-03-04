@@ -1,11 +1,50 @@
+:root {
+  --app_bg: #fff;
+  --first_plan_bg: #fff;
+  --primary_text_color: #262626;
+  --secondary_text_color: #acacac;
+  --menu_text_color: #fff;
+  --select_shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.425);
+  --footer_shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+  --theme_btn_bd: #8f8f8f;
+  --theme_btn_bg: #cfcece;
+  --theme_switch_margin: 0 auto 0 0;
+  --sun_icon_visible: visible;
+  --moon_icon_visible: hidden;
+}
+
+.darkmode {
+  --app_bg: rgb(17, 26, 35);
+  --first_plan_bg: #363636;
+  --primary_text_color: #eee;
+  --secondary_text_color: #A7A6A6;
+  --menu_text_color: #fff;
+  --select_shadow: 2px 2px 2px 2px rgba(113, 113, 113, 0.41);
+  --footer_shadow: 0 -2px 2px rgba(113, 113, 113, 0.41);
+  --theme_btn_bd: #666666;
+  --theme_btn_bg: rgb(35, 54, 73);
+  --theme_switch_margin: 0 0 0 auto;
+  --sun_icon_visible: hidden;
+  --moon_icon_visible: visible;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "Poppins", Arial, sans-serif;
   margin: 0;
-  color: #262626;
+  color: var(--primary_text_color);
   overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: visible;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100dvh);
+  margin-top: 60px;
+  background-color: var(--app_bg);
 }
 
 .no-select{
@@ -25,7 +64,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: var(--menu_text_color);
   z-index: 9999;
 }
 
@@ -93,7 +132,7 @@ h3 {
 .menu-links {
   background-color: transparent;
   transition: all 0.3s ease-out;
-  color: #fff;
+  color: var(--menu_text_color);
   padding: 2px;
 }
 
@@ -110,20 +149,12 @@ h3 {
   }
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: calc(100dvh);
-  margin-top: 60px;
-}
-
 .recipe-card {
   margin-top: 30px;
   height: 150px;
   display: flex;
   justify-content: flex-end;
-  border: 1px solid #262626;
+  border: 1px solid var(--primary_text_color);
   border-radius: 5px;
   background-size: cover;
   flex-shrink: 0;
@@ -188,7 +219,7 @@ h3 {
   padding: 5px;
   width: 100px;
   color: #262626;
-  border: 1px solid #262626;
+  border: 1px solid var(--primary_text_color);
   font-weight: bolder;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -197,12 +228,12 @@ h3 {
 .recipe-type:hover {
   width: 110px;
   height: 45px;
-  color: #acacac;
+  color: var(--secondary_text_color);
 }
 
 .recipe-type.selected {
-  border: 2px solid #262626;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--secondary_text_color);
+  box-shadow: var(--select_shadow);
   width: 110px;
   height: 45px;
 }
@@ -233,8 +264,8 @@ h3 {
   width: 100vw;
   bottom: 0;
   position: relative;
-  color: #fefefe;
-  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+  color: var(--menu_text_color);
+  box-shadow: var(--footer_shadow);
 }
 
 .container {
@@ -269,7 +300,7 @@ h3 {
 }
 
 .social-links a {
-  color: #fff;
+  color: var(--menu_text_color);
   font-size: 20px;
   text-decoration: none;
 }
@@ -285,13 +316,13 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com transparência */
-  z-index: 9999; /* Garante que a modal esteja acima de outros elementos */
-  overflow: auto; /* Adiciona rolagem quando necessário */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: auto;
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--first_plan_bg);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -306,7 +337,7 @@ h3 {
 }
 
 .close {
-  color: #aaa;
+  color: var(--secondary_text_color);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -314,7 +345,7 @@ h3 {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: var(--primary_text_color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -339,7 +370,7 @@ h3 {
 .recipe-header .presentation img, .img{
   width: 200px;
   border-radius: 10px;
-  border: 1px solid #262626;
+  border: 1px solid var(--primary_text_color);
 
   transition: width 1s ease-in-out;
 }
@@ -366,7 +397,7 @@ h3 {
 
 .recipe-info .share{
   background-color: #ff8c5b;
-  border: 1px solid #262626;
+  border: 1px solid var(--primary_text_color);
   border-radius: 10px;
   width: 100px;
   height: 20px;
@@ -395,7 +426,7 @@ h3 {
 
 .ingredient input[type="checkbox"]:checked + span {
   text-decoration: line-through;
-  color: #888;
+  color: var(--secondary_text_color);
 }
 
 .method{
@@ -424,8 +455,55 @@ h3 {
   align-self: center;
 }
 
+.set-theme {
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 2px;
+  margin: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.set-theme {
+  border: 2px solid var(--theme_btn_bd);
+  background-color: var(--theme_btn_bg);
+}
+
+.theme-switch {
+  width: 45%;
+  border-radius: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--app_bg);
+  color: var(--secondary_text_color);
+  margin: var(--theme_switch_margin);
+  transition: margin 0.3s ease;
+}
+
+.theme-switch i {
+  font-size: 15px;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: fixed;
+}
+
+.sun {
+  visibility: var(--sun_icon_visible);
+}
+
+.moon {
+  visibility: var(--moon_icon_visible);
+}
+
+.navbar-opt {
+  display: flex;
+}
+
 /* Estilos específicos para dispositivos móveis */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 699px) {
   .recipe-card {
     width: 90vw;
   }
@@ -446,7 +524,7 @@ h3 {
   }
 
   #mobile-open-menu.visible {
-    background-color: #fff;
+    background-color: var(--menu_text_color);
     color: #ff6a28;
   }
 
@@ -480,7 +558,7 @@ h3 {
     width: 0;
     display: none;
     background-color: #ff6a28;
-    color: #fff;
+    color: var(--menu_text_color);
     height: 100vh;
     top: 0;
     position: fixed;
@@ -510,7 +588,7 @@ h3 {
 }
 
 /* Media query para telas grandes */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .recipe-card {
     width: 70vw;
   }
@@ -521,10 +599,11 @@ h3 {
 
   #desktop-icons {
     display: flex;
+    align-items: center;
     gap: 10px;
   }
 
-  #desktop-icons i {
+  #desktop-icons .menu-links i {
     font-size: 20px;
   }
   .recipe-header .presentation img{
@@ -536,13 +615,13 @@ h3 {
 }
 
 /* faz a animação do slogan ser visível */
-@media only screen and (min-width: 795px) {
+@media only screen and (min-width: 840px) {
   .slogan {
     display: flex;
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 850px) {
   .slogan {
     opacity: 1;
     flex-grow: 1;
