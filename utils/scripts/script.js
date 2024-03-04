@@ -82,12 +82,12 @@ getDailyRecipe();
 
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
+    const body = document.body;
     if (theme === 'dark') {
         body.classList.add('darkmode');
     }
 
     const themeSwitcher = document.getElementById('set-theme');
-    const body = document.body;
 
     themeSwitcher.addEventListener('click', () => {
         body.classList.toggle('darkmode');
