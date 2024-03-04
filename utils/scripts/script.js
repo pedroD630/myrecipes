@@ -83,8 +83,21 @@ getDailyRecipe();
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
-        body.classList.add('dark-mode');
+        body.classList.add('darkmode');
     }
+
+    const themeSwitcher = document.getElementById('set-theme');
+    const body = document.body;
+
+    themeSwitcher.addEventListener('click', () => {
+        body.classList.toggle('darkmode');
+
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
 
     document.getElementById("mobile-open-menu").addEventListener("click", function () {
         document.querySelector(".nav-menu").classList.toggle("visible");
