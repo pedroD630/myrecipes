@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeSwitcher.addEventListener('click', () => {
         body.classList.toggle('darkmode');
 
-        if (body.classList.contains('dark-mode')) {
+        if (body.classList.contains('darkmode')) {
             localStorage.setItem('theme', 'dark');
         } else {
             localStorage.setItem('theme', 'light');
