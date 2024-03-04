@@ -372,7 +372,7 @@ h3 {
 .recipe-header .presentation img, .img{
   width: 200px;
   border-radius: 10px;
-  border: 1px solid #262626;
+  border: 1px solid var(--primary_text_color);
 
   transition: width 1s ease-in-out;
 }
