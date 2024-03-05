@@ -1,5 +1,5 @@
 function isHomepage() {
-    return window.location.pathname === '/myrecipes/index.html';
+    return window.location.pathname === '/myrecipes/' || window.location.pathname.endsWith('/index.html');
 }
 
 function sharePage(isRecipe) {
