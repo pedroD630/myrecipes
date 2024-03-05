@@ -1,0 +1,19 @@
+{
+  "background_color": "rgb(17, 26, 35)",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Pedro Receitas",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Receitas",
+  "start_url": "/myrecipes/",
+  "theme_color": "#ff6a28",
+  "icons": [
+    {
+      "src": "/myrecipes/logo.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "description": "Receitas para iniciantes",
+  "lang": "pt"
+}
